@@ -1,0 +1,11 @@
+# A simple program about CO2 emissions
+def carbon_footprint(energy_kwh, fuel_liters):
+    CO2_from_energy = energy_kwh * 0.233  # kg CO2 per kWh
+    CO2_from_fuel = fuel_liters * 2.31    # kg CO2 per liter of gasoline
+    total_CO2 = CO2_from_energy + CO2_from_fuel
+    return total_CO2
+
+energy = float(input("Enter your monthly electricity use (kWh): "))
+fuel = float(input("Enter your monthly fuel use (liters): "))
+
+print(f"Your estimated CO2 footprint: {carbon_footprint(energy, fuel):.2f} kg CO2/month")
