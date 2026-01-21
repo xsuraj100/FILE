@@ -1,0 +1,5 @@
+file = open("binary.dat", "wb")
+file.write(b"Python File Handling")
+file.close()
+
+print("Binary data written")
